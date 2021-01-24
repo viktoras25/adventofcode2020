@@ -1,0 +1,8 @@
+{
+  "name": "adventofcode2020",
+  "scripts": {
+    "ping": "echo 'Pong'"
+  },
+  "author": "Viktoras Bezaras",
+  "license": "MIT"
+}
