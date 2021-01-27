@@ -2,26 +2,26 @@ const tree = '#';
 
 export default class Map {
   constructor(textRepresentation) {
-    this.cells = this.parse(textRepresentation);
+    this.parse(textRepresentation);
     this.baseHeight = this.cells.length;
     this.baseWidth = this.cells[0].length;
   }
 
   parse(textRepresentation) {
-    const lines = textRepresentation.split('\n');
-
-    return lines.map((line) => line.split(''));
+    this.cells = textRepresentation
+      .split('\n')
+      .map((line) => line.split(''));
   }
 
   isTree(originalX, originalY) {
     let x = originalX;
     let y = originalY;
 
-    while (x > this.baseWidth) {
+    while (x >= this.baseWidth) {
       x %= this.baseWidth;
     }
 
-    while (y > this.baseHeight) {
+    while (y >= this.baseHeight) {
       y %= this.baseHeight;
     }
 
